@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'DoupQueue_Example' do
+  pod 'DoupQueue', :path => '../'
+
+  target 'DoupQueue_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0'
+  pod 'FBSnapshotTestCase'
+  pod 'Nimble-Snapshots'
+  end
+end
