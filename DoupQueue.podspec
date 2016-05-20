@@ -40,5 +40,5 @@ DoupQueue is a download and upload queue manager. It supports download and uploa
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Alamofire', :git => "https://github.com/Alamofire/Alamofire", :tag => "3.4.0"
+  s.dependency 'Alamofire', '~> 3.4' #s.dependency 'Alamofire', :git => "https://github.com/Alamofire/Alamofire", :tag => "3.4.0"
 end
