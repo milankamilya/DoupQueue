@@ -11,5 +11,5 @@ before_install:
  - pod install --project-directory=Example
 script:
 #- set -o pipefail && xcodebuild test -workspace Example/DoupQueue.xcworkspace -scheme DoupQueue-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- set -e && xcodebuild -workspace Example/DoupQueue.xcworkspace -scheme DoupQueue-Example -sdk iphonesimulator8.4 test | xcpretty -c
+- set -e && xcodebuild -workspace Example/DoupQueue.xcworkspace -scheme DoupQueue-Example -sdk iphonesimulator9.1 test #| xcpretty -c
 - pod lib lint
