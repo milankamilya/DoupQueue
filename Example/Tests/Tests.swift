@@ -5,46 +5,67 @@ import Nimble
 import DoupQueue
 
 class TableOfContentsSpec: QuickSpec {
+    
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+        
+        // 1. Download queue test
+        describe("Download queue test"){
             
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
+            var downloadCompletionIndex = -1
+            
+            it("1st Download Asynchronous", closure: {
+                
+                waitUntil(timeout: 180, action: { (done) in
+                    DoupQueueManager.sharedManager.pushToDownloadQueue("http://cdn.wccftech.com/wp-content/uploads/2015/06/os-x-10.11-wallpaper.jpg", progressHandler: { (percentage) in
+                        
+                        downloadCompletionIndex = 0
+                    }) { (location, error) in
+                        
+                        expect("0") == "\(downloadCompletionIndex)"
                         done()
                     }
-                }
-            }
+                })
+                
+            })
+            
+            
+            it("2nd Download Asynchronous", closure: {
+                
+                waitUntil(timeout: 180, action: { (done) in
+                    DoupQueueManager.sharedManager.pushToDownloadQueue("http://www.webextensionline.com/wp-content/uploads/Natural-summer-pink-flower.jpg", progressHandler: { (percentage) in
+                        
+                        downloadCompletionIndex = 1
+                    }) { (location, error) in
+                        
+                        expect("1") == "\(downloadCompletionIndex)"
+                        done()
+                    }
+                })
+                
+            })
+            
+            it("3rd Download Asynchronous", closure: {
+                
+                waitUntil(timeout: 180, action: { (done) in
+                    DoupQueueManager.sharedManager.pushToDownloadQueue("http://wallpaperswide.com/download/nature_221-wallpaper-2880x1800.jpg", progressHandler: { (percentage) in
+                        
+                        downloadCompletionIndex = 2
+                    }) { (location, error) in
+                        
+                        expect("2") == "\(downloadCompletionIndex)"
+                        done()
+                    }
+                })
+                
+            })
+            
         }
+        
+        
+        // 2. Upload queue test using uploading already downloaded data
+        // 3. Simultaneous testing of download & upload testing.
+        
+        
     }
+ 
 }

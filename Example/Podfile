@@ -2,13 +2,17 @@ use_frameworks!
 
 target 'DoupQueue_Example' do
   pod 'DoupQueue', :path => '../'
-
+  pod 'XCGLogger', '~> 3.3'
+  pod 'Alamofire', '~> 3.4'
+  
   target 'DoupQueue_Tests' do
     inherit! :search_paths
-
+    pod 'XCGLogger', '~> 3.3'
+    pod 'Alamofire', '~> 3.4'
     pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+    pod 'Nimble', '~> 3.0'
+    #pod 'Nimble-Snapshots'
+    #FYI :: Nimble & Nimble-Snapshots internally add FBSnapshotTestCase
   end
 end
+

@@ -1,0 +1,6 @@
+framework module Pods_DoupQueue_Example {
+  umbrella header "Pods-DoupQueue_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
