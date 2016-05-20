@@ -25,7 +25,8 @@ DoupQueue is a download and upload queue manager. It supports download and uploa
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Milan Kamilya" => "milan.kamilya@innofied.com" }
-  s.source           = { :git => "https://github.com/milankamilya/DoupQueue.git", :tag => s.version.to_s }
+  #s.source           = { :git => "https://github.com/milankamilya/DoupQueue.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/milankamilya/DoupQueue.git" }
   s.social_media_url = 'https://twitter.com/Milan_Kamilya'
 
   s.ios.deployment_target = '8.0'
