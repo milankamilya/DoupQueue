@@ -7,7 +7,8 @@ target 'DoupQueue_Example' do
   platform :ios, '8.0'
   use_frameworks!
   
-  pod 'XCGLogger', '~> 3.3'
+  #pod 'XCGLogger', '~> 3.3' :git => "https://github.com/DaveWoodCom/XCGLogger", :branch => "custom"
+  pod 'XCGLogger', :git => "https://github.com/DaveWoodCom/XCGLogger", :tag => "Version_3.3"
   pod 'Alamofire', '~> 3.4'
   
   target 'DoupQueue_Tests' do
