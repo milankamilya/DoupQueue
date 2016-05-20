@@ -2,12 +2,16 @@ use_frameworks!
 
 target 'DoupQueue_Example' do
   pod 'DoupQueue', :path => '../'
+  
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '8.0'
+  use_frameworks!
+  
   pod 'XCGLogger', '~> 3.3'
   pod 'Alamofire', '~> 3.4'
   
   target 'DoupQueue_Tests' do
     inherit! :search_paths
-    pod 'XCGLogger', '~> 3.3'
     pod 'Alamofire', '~> 3.4'
     pod 'Quick', '~> 0.8'
     pod 'Nimble', '~> 3.0'
