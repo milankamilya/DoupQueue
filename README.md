@@ -1,6 +1,6 @@
 # DoupQueue
 
-[![CI Status](http://img.shields.io/travis/Milan Kamilya/DoupQueue.svg?style=flat)](https://travis-ci.org/Milan Kamilya/DoupQueue)
+[![CI Status](http://img.shields.io/travis/Milan Kamilya/DoupQueue.svg?style=flat)](https://travis-ci.org/milankamilya/DoupQueue)
 [![Version](https://img.shields.io/cocoapods/v/DoupQueue.svg?style=flat)](http://cocoapods.org/pods/DoupQueue)
 [![License](https://img.shields.io/cocoapods/l/DoupQueue.svg?style=flat)](http://cocoapods.org/pods/DoupQueue)
 [![Platform](https://img.shields.io/cocoapods/p/DoupQueue.svg?style=flat)](http://cocoapods.org/pods/DoupQueue)
